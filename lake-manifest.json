@@ -1,16 +1,21 @@
-{"version": "1.3.0",
- "packagesDir": ".lake/packages",
- "packages":
- [{"url": "https://github.com/maxdeviant/leanscript",
-   "type": "git",
-   "subDir": null,
-   "scope": "",
-   "rev": "bae8831f191ba2d13ea3bf9a55db6d0a4771456e",
-   "name": "leanscript",
-   "manifestFile": "lake-manifest.json",
-   "inputRev": "bae8831f191ba2d13ea3bf9a55db6d0a4771456e",
-   "inherited": false,
-   "configFile": "lakefile.toml"}],
- "name": "app",
- "lakeDir": ".lake",
- "fixedToolchain": false}
+{
+  "version": "1.3.0",
+  "packagesDir": ".lake/packages",
+  "packages": [
+    {
+      "url": "https://github.com/maxdeviant/leanscript",
+      "type": "git",
+      "subDir": null,
+      "scope": "",
+      "rev": "bae8831f191ba2d13ea3bf9a55db6d0a4771456e",
+      "name": "leanscript",
+      "manifestFile": "lake-manifest.json",
+      "inputRev": "bae8831f191ba2d13ea3bf9a55db6d0a4771456e",
+      "inherited": false,
+      "configFile": "lakefile.toml"
+    }
+  ],
+  "name": "app",
+  "lakeDir": ".lake",
+  "fixedToolchain": false
+}

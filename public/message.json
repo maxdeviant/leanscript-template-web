@@ -1,1 +1,4 @@
-{ "text": "This message was fetched with Lean.", "author": "public/message.json" }
+{
+  "text": "This message was fetched with Lean.",
+  "author": "public/message.json"
+}
