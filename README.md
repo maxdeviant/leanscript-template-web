@@ -28,3 +28,7 @@ The dev server compiles the app, and reloads the page when you edit any of its L
 ## Updating LeanScript
 
 Change the `rev` of LeanScript in `lakefile.toml`, and run `lake update leanscript`.
+
+## License
+
+This template is licensed under [MIT-0](LICENSE), so apps made from it don't need to keep its copyright notice, and can use any license.
