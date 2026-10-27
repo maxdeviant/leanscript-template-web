@@ -1,0 +1,3 @@
+minimumReleaseAgeExclude:
+  - '@leanscript/runtime@0.1.0'
+  - '@leanscript/vite-plugin@0.1.0'

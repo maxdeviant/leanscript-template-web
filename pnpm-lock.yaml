@@ -166,15 +166,23 @@ importers:
 
   .:
     dependencies:
-      leanscript:
-        specifier: link:.lake/packages/leanscript
-        version: link:.lake/packages/leanscript
+      '@leanscript/vite-plugin':
+        specifier: 0.1.0
+        version: 0.1.0(vite@8.3.5)
     devDependencies:
       vite:
         specifier: ^8.3.5
         version: 8.3.5
 
 packages:
+
+  '@leanscript/runtime@0.1.0':
+    resolution: {integrity: sha512-BrKNYVw8da4CnTq6zAQWOs1eVmn7ZfFOlvhRZZW0Lscuqy+RqctoN2Qr2ZAmWU6eEymEyWme4akmoeFmou45bA==}
+
+  '@leanscript/vite-plugin@0.1.0':
+    resolution: {integrity: sha512-+9ZxnkteVtxmOzv71cNX8//ESOQEUpFw3X1qhp2EPLnEX2DZTf8PYLwAZOyEB5SpqMP52RyxbHMIyYMbkG4//A==}
+    peerDependencies:
+      vite: '>=6'
 
   '@oxc-project/types@0.155.0':
     resolution: {integrity: sha512-SeE8JPwW1xs1tHeNycjUtUBdhorRa8o4jlvjwk49R7/Z291i+4DQa7JJIgOm/TaYQZx+QrPQbVJ/9c8dMIZN8Q==}
@@ -443,6 +451,13 @@ packages:
         optional: true
 
 snapshots:
+
+  '@leanscript/runtime@0.1.0': {}
+
+  '@leanscript/vite-plugin@0.1.0(vite@8.3.5)':
+    dependencies:
+      '@leanscript/runtime': 0.1.0
+      vite: 8.3.5
 
   '@oxc-project/types@0.155.0': {}
 

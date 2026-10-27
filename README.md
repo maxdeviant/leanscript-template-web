@@ -6,20 +6,19 @@ A template for web apps written in Lean, and compiled to JavaScript with [LeanSc
 
 - `Main.lean` is the app's entry point, which `index.html` loads directly, as `<script type="module" src="./Main.lean">`.
 - `App/` holds the app's other modules: `App/Counter.lean` has the counter's state, and `App/Message.lean` fetches the message.
-- `lakefile.toml` requires LeanScript, which provides the `Js` library, the compiler, the JS runtime, and the Vite plugin. `lake-manifest.json` pins its version.
-- `package.json` links the `leanscript` npm package to the copy of LeanScript that Lake fetches, so the JS runtime and the Vite plugin always match the compiler.
+- `lakefile.toml` requires LeanScript, which provides the `Js` library and the compiler.
+- `package.json` depends on `@leanscript/vite-plugin`, which compiles `.lean` files with the compiler that Lake builds, and provides the JS runtime that compiled code uses.
 
 ## Getting started
 
 Install [elan](https://github.com/leanprover/elan), which installs the Lean version in `lean-toolchain`, and [pnpm](https://pnpm.io). With [Nix](https://nixos.org), `nix develop` provides both, and [direnv](https://direnv.net) loads them when you enter the directory, after you run `direnv allow`. Then:
 
 ```sh
-lake build leanscript
 pnpm install
 pnpm dev
 ```
 
-`lake build leanscript` fetches LeanScript and builds its compiler, which `pnpm install` needs to link to. The `dev` and `build` scripts run it again, which does nothing unless LeanScript has changed.
+The first time it compiles the app, the plugin has Lake fetch LeanScript and build its compiler, which takes a few seconds.
 
 The dev server compiles the app, and reloads the page when you edit any of its Lean files.
 
@@ -27,7 +26,7 @@ The dev server compiles the app, and reloads the page when you edit any of its L
 
 ## Updating LeanScript
 
-Change the `rev` of LeanScript in `lakefile.toml`, and run `lake update leanscript`.
+LeanScript's Lake package and npm packages share a version, and a compiled app only runs on the runtime of the same version as its compiler. To update, change both the `rev` of LeanScript in `lakefile.toml`, such as `v0.2.0`, and the version of `@leanscript/vite-plugin` in `package.json`, to the new version. Then run `lake update leanscript` and `pnpm install`.
 
 ## License
 

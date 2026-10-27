@@ -24,9 +24,6 @@ jobs:
           node-version: 24
           cache: pnpm
 
-      - name: Build LeanScript
-        run: lake build leanscript
-
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm build
