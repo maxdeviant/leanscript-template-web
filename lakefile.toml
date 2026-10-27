@@ -1,0 +1,10 @@
+name = "app"
+
+[[require]]
+name = "leanscript"
+git = "https://github.com/maxdeviant/leanscript"
+rev = "bae8831f191ba2d13ea3bf9a55db6d0a4771456e"
+
+[[lean_lib]]
+name = "App"
+globs = ["App.+"]

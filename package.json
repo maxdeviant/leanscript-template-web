@@ -1,0 +1,17 @@
+{
+  "name": "leanscript-template-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "lake build leanscript && vite",
+    "build": "lake build leanscript && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "leanscript": "link:.lake/packages/leanscript"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  },
+  "packageManager": "pnpm@12.9.0"
+}

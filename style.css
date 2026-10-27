@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  max-width: 32rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+button {
+  font: inherit;
+  padding: 0.25rem 0.75rem;
+}
+
+#count {
+  font-size: 2rem;
+  font-variant-numeric: tabular-nums;
+}
