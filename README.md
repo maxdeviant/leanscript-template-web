@@ -11,7 +11,7 @@ A template for web apps written in Lean, and compiled to JavaScript with [LeanSc
 
 ## Getting started
 
-Install [elan](https://github.com/leanprover/elan), which installs the Lean version in `lean-toolchain`, and [pnpm](https://pnpm.io). Then:
+Install [elan](https://github.com/leanprover/elan), which installs the Lean version in `lean-toolchain`, and [pnpm](https://pnpm.io). With [Nix](https://nixos.org), `nix develop` provides both, and [direnv](https://direnv.net) loads them when you enter the directory, after you run `direnv allow`. Then:
 
 ```sh
 lake build leanscript
